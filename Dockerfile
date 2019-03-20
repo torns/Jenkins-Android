@@ -30,7 +30,7 @@ USER root
 
 RUN dpkg --add-architecture i386
 RUN apt-get update && \
-	apt-get install software-properties-common git unzip file -y
+	apt-get install software-properties-common git vim unzip file -y
 
 ADD $GRADLE_ZIP_URL /opt/
 RUN unzip /opt/$GRADLE_ZIP -d /opt/ && \
